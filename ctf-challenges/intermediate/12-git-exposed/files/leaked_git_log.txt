@@ -1,0 +1,19 @@
+commit 8a7d6e5f... (HEAD -> main)
+Author: A Developer <dev@example.com>
+Date:   Mon Aug 25 10:00:00 2025 -0500
+
+    Remove super secret API key
+
+    This should not have been committed.
+
+commit 4b3c2d1a...
+Author: A Developer <dev@example.com>
+Date:   Mon Aug 25 09:55:00 2025 -0500
+
+    Add super secret API key
+
+commit 1a2b3c4d...
+Author: A Developer <dev@example.com>
+Date:   Mon Aug 25 09:50:00 2025 -0500
+
+    Initial commit

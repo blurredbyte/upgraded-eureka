@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /tmp/
+# Our developers were told to hide the flag here.
+# The flag is ICIMS{R0B0T5_C4N7_K33P_S3CR3T5}

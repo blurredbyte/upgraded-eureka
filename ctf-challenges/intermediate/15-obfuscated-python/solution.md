@@ -73,6 +73,18 @@ There are two main ways to solve this:
 
 ## Organizer Notes
 
-*   **Hosting:** This is a static challenge. The `script.py` file should be provided to the participants. They will need Python to run it.
+*   **Hosting:** This challenge can be run locally if the participant has Python installed. Alternatively, it can be run using Docker.
 *   **Flag:** `ICIMS{D3BFU5C4T10N_15_FUN}`
 *   **Obfuscation Techniques Used:** Base64 encoding, `exec`, `eval`, and useless code to distract the participant. This challenge teaches basic static and dynamic analysis of obfuscated scripts.
+
+### Docker Instructions
+
+1.  Navigate to the `files` directory for this challenge.
+2.  Build the Docker image:
+    ```bash
+    docker build -t obfuscated-python-challenge .
+    ```
+3.  Run the challenge interactively:
+    ```bash
+    docker run -it obfuscated-python-challenge
+    ```

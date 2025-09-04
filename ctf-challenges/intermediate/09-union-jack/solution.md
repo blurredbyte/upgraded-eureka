@@ -54,6 +54,19 @@ This challenge teaches the importance of input validation and using parameterize
 
 ## Organizer Notes
 
-*   **Hosting:** To run this challenge, navigate to the `files` directory and follow the instructions in the `README.md` to set up the database and run the Flask application. The app requires Python and Flask.
+*   **Hosting:** This challenge can be run locally by following the instructions in the `README.md`. Alternatively, it can be run using Docker.
 *   **Flag:** `ICIMS{SQL_INJ3CTI0N_IS_A_T0P_VULN}`
 *   **Vulnerability:** The application is vulnerable to SQL injection because it uses unsafe string concatenation to build an SQL query with user-provided input.
+
+### Docker Instructions
+
+1.  Navigate to the `files` directory for this challenge.
+2.  Build the Docker image:
+    ```bash
+    docker build -t union-jack-challenge .
+    ```
+3.  Run the challenge:
+    ```bash
+    docker run -p 5001:5001 union-jack-challenge
+    ```
+4.  The application will be accessible at `http://localhost:5001`.

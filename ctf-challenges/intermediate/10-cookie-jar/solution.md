@@ -39,6 +39,19 @@ The application uses a cookie to manage user sessions and permissions. The cooki
 
 ## Organizer Notes
 
-*   **Hosting:** To run this challenge, navigate to the `files` directory and run `python app.py`. The application requires Flask. Ensure dependencies are installed using `pip install -r requirements.txt`. The app will run on `http://127.0.0.1:5002`.
+*   **Hosting:** This challenge can be run locally by following the instructions in the `README.md`. Alternatively, it can be run using Docker.
 *   **Flag:** `ICIMS{C00K13S_SH0ULD_B3_S3CUR3}`
 *   **Vulnerability:** The core vulnerability is the lack of a signature on the session cookie, allowing for client-side manipulation of privileges. A secure implementation would use a server-side session store or a signed cookie (e.g., using Flask's built-in session management with a secret key, or a JWT).
+
+### Docker Instructions
+
+1.  Navigate to the `files` directory for this challenge.
+2.  Build the Docker image:
+    ```bash
+    docker build -t cookie-jar-challenge .
+    ```
+3.  Run the challenge:
+    ```bash
+    docker run -p 5002:5002 cookie-jar-challenge
+    ```
+4.  The application will be accessible at `http://localhost:5002`.

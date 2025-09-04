@@ -54,6 +54,19 @@ A secure implementation would sanitize the input, for example by using `os.path.
 
 ## Organizer Notes
 
-*   **Hosting:** To run this challenge, navigate to the `files` directory and run `python app.py`. The application requires Flask. Ensure dependencies are installed using `pip install -r requirements.txt`. The app will run on `http://127.0.0.1:5003`.
+*   **Hosting:** This challenge can be run locally by following the instructions in the `README.md`. Alternatively, it can be run using Docker.
 *   **Flag:** `ICIMS{P4TH_TR4V3RS4L_1S_D4NG3R0US}`
 *   **Vulnerability:** The application is vulnerable to Path Traversal because it doesn't sanitize user input for directory traversal sequences (`../`).
+
+### Docker Instructions
+
+1.  Navigate to the `files` directory for this challenge.
+2.  Build the Docker image:
+    ```bash
+    docker build -t path-traversal-challenge .
+    ```
+3.  Run the challenge:
+    ```bash
+    docker run -p 5003:5003 path-traversal-challenge
+    ```
+4.  The application will be accessible at `http://localhost:5003`.

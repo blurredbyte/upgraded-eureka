@@ -104,7 +104,20 @@ Running this script will eventually reveal the password: `T1M3_B453D_BL1ND`. The
 
 ## Organizer Notes
 
-*   **Hosting:** Run the `app.py` script from the `files` directory. It requires Python and Flask.
+*   **Hosting:** This challenge can be run locally by following the instructions in the `README.md`. Alternatively, it can be run using Docker.
 *   **Flag:** `ICIMS{T1M3_B453D_BL1ND}`
 *   **Vulnerability:** Time-based Blind SQL Injection. The `app.py` has a custom `sleep` function registered with SQLite to make the vulnerability work consistently.
 *   **Note:** This is a difficult challenge that requires scripting. Participants will need to understand the principles of Blind SQLi and be able to automate their attacks. The provided solver script is one way to do it.
+
+### Docker Instructions
+
+1.  Navigate to the `files` directory for this challenge.
+2.  Build the Docker image:
+    ```bash
+    docker build -t impatient-database-challenge .
+    ```
+3.  Run the challenge:
+    ```bash
+    docker run -p 5005:5005 impatient-database-challenge
+    ```
+4.  The application will be accessible at `http://localhost:5005`.

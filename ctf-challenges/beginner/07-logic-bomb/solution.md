@@ -111,6 +111,19 @@ This challenge teaches participants to read code carefully and look for alternat
 
 ## Organizer Notes
 
-*   **Hosting:** This is a static challenge. The `login.py` script should be provided to the participants. They will need to have Python installed to run it.
+*   **Hosting:** This challenge can be run locally if the participant has Python installed. Alternatively, it can be run using Docker.
+
 *   **Flag:** `ICIMS{L0G1C_FL4W5_C4N_B3_D4NG3R0US}`
 *   **Note:** The vulnerability is the `or user_input < 0` condition in the `if` statement, which allows any negative number to be accepted as a valid password.
+
+### Docker Instructions
+
+1.  Navigate to the `files` directory for this challenge.
+2.  Build the Docker image:
+    ```bash
+    docker build -t logic-bomb-challenge .
+    ```
+3.  Run the challenge interactively:
+    ```bash
+    docker run -it logic-bomb-challenge
+    ```

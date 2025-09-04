@@ -40,6 +40,19 @@ A secure implementation would use a templating engine that performs context-awar
 
 ## Organizer Notes
 
-*   **Hosting:** To run this challenge, navigate to the `files` directory and run `python app.py`. The application requires Flask. Ensure dependencies are installed using `pip install -r requirements.txt`. The app will run on `http://127.0.0.1:5004`.
+*   **Hosting:** This challenge can be run locally by following the instructions in the `README.md`. Alternatively, it can be run using Docker.
 *   **Flag:** `ICIMS{XSS_1S_3V3RYWH3R3}`
 *   **Vulnerability:** The application is vulnerable to Reflected XSS because it includes unescaped user input in the HTML response. This is a classic example of a reflected XSS vulnerability. The challenge is designed to be simple, with no filters to bypass.
+
+### Docker Instructions
+
+1.  Navigate to the `files` directory for this challenge.
+2.  Build the Docker image:
+    ```bash
+    docker build -t reflected-xss-challenge .
+    ```
+3.  Run the challenge:
+    ```bash
+    docker run -p 5004:5004 reflected-xss-challenge
+    ```
+4.  The application will be accessible at `http://localhost:5004`.

@@ -1,0 +1,3 @@
+# config.py.old
+DATABASE_URL = "dev_db_url"
+API_KEY = "ICIMS{G1T_H1ST0RY_1S_F0R3V3R}" # TODO: Remove this before production

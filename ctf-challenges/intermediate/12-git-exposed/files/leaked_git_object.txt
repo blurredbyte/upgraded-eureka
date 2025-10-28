@@ -1,0 +1,11 @@
+This file represents the contents of config.php from commit 4b3c2d1a.
+In a real scenario, you would extract this from the git object store.
+
+---
+
+<?php
+$db_host = "localhost";
+$db_user = "user";
+$db_pass = "password";
+$api_key = "ICIMS{G1T_1S_4_W0ND3RFUL_T00L_BUT_D4NG3R0US}";
+?>

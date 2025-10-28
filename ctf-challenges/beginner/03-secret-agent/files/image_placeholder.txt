@@ -1,0 +1,7 @@
+This is a placeholder for an image file.
+
+The image would show the Golden Gate Bridge in San Francisco, partially covered in fog.
+The distinctive orange-red color of the bridge would be clearly visible against the fog and the water of the bay.
+This would be enough information for an OSINT beginner to identify the city.
+
+When the CTF is deployed, this text file should be replaced with an actual JPEG or PNG image of the Golden Gate Bridge.
